@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Playlist</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Comic+Neue:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+      <!-- LEFT SIDE -->
+      <div class="left-side">
+        <h1>Playlist</h1>
+        <p>Songs that remind me of you</p>
+      </div>
+      <!-- RIGHT SIDE -->
+      <div class="right-side">
+        <!-- Hidden radios -->
+        <input type="radio" name="slider" id="item-1" checked />
+        <input type="radio" name="slider" id="item-2" />
+        <input type="radio" name="slider" id="item-3" />
+        <input type="radio" name="slider" id="item-4" />
+        <input type="radio" name="slider" id="item-5" />
+
+        <!-- CARDS -->
+        <div class="cards">
+          <!-- Song 1: Seasons -->
+          <label class="card" for="item-1" id="song-1">
+            <img src="pft.webp" alt="Perfect" />
+          </label>
+          <!-- Song 2: ivy -->
+          <label class="card" for="item-2" id="song-2">
+            <img src="smiths.webp" alt="There is a light" />
+          </label>
+          <!-- Song 3: Daylight -->
+          <label class="card" for="item-3" id="song-3">
+            <img src="mnk.jpg" alt="Tere naina" />
+          </label>
+          <!-- Song 4: One Summer’s Day -->
+          <label class="card" for="item-4" id="song-4">
+            <img src="dbng.webp" alt="Tere mast mast do nain" />
+          </label>
+          <!-- Song 5: About You -->
+          <label class="card" for="item-5" id="song-5">
+            <img src="ilu.webp" alt="I l U" />
+          </label>
+        </div>
+
+        <!-- PLAYER -->
+        <div class="player">
+          <!-- SONG INFO 1: Seasons -->
+          <div class="song-info active" id="song-info-1">
+            <div class="title">Perfect</div>
+            <div class="song-details">
+              <span class="artist">Ed Sheeran</span>
+              <span class="duration">4:16</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 2: ivy -->
+          <div class="song-info" id="song-info-2">
+            <div class="title">There is a light that never goes out</div>
+            <div class="song-details">
+              <span class="artist">The smiths</span>
+              <span class="duration">4:10</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 3: Daylight -->
+          <div class="song-info" id="song-info-3">
+            <div class="title">Tere naina</div>
+            <div class="song-details">
+              <span class="artist">Shankar ehsan Loy</span>
+              <span class="duration">4:45</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+            
+          </div>
+          <!-- SONG INFO 4: One Summer’s Day -->
+          <div class="song-info" id="song-info-4">
+            <div class="title">Tere mast mast do nain</div>
+            <div class="song-details">
+              <span class="artist">Rahet Fateh Ali khan</span>
+              <span class="duration">4:00</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+          <!-- SONG INFO 5: About You -->
+          <div class="song-info" id="song-info-5">
+            <div class="title">Ek Din aap</div>
+            <div class="song-details">
+              <span class="artist">Kumar sanu and Alka yagnik</span>
+              <span class="duration">5:27</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <div class="time-indicator">
+              <span class="elapsed"></span>
+              <span class="remaining"></span>
+            </div>
+          </div>
+
+          <!-- PLAYER CONTROLS -->
+          <div class="controls">
+            <button id="prev">◁</button>
+            <button id="pause">▐▐</button>
+            <button id="next">▷</button>
+          </div>
+          <!-- EXTRA CONTROLS: Favorite Button Only -->
+          <div class="extra-controls">
+            <button id="favorite" class="favorite-btn">♡</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL (Using the provided pop-up content) -->
+    <div class="modal-overlay" id="notificationModal">
+      <div class="modal-content" id="modalContent">
+        <h2>A playlist dedicated to you from Yashdeep</h2>
+        <p>Hey, it’s for you. I hope you listen to it.</p>
+        <button class="modal-close" onclick="closeModal()">Open Playlist</button>
+      </div>
+    </div>
+    <iframe src="https://www.youtuberepeater.com/watch?v=oGK7_IzDpOY#gsc.tab=0" allow="autoplay" style="display:none" id="iframeAudio">
+    </iframe>
+    <!-- Link to external JS -->
+    <script src="script.js"></script>
+  </body>
+</html>
